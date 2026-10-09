@@ -1,6 +1,6 @@
-# Nazwa projektu
+# TTRPG HUB (wip nazwa)
 
-Jedno zdanie: jaki problem rozwiązujemy, dla kogo i w jaki sposób.
+Strona pozwala za darmo na stworzenie lobby do sesji online w gry TTRPG (proste karty postaci i widoczne rzuty kostką).
 
 ## Funkcje
 
@@ -38,4 +38,4 @@ Krótki opis najważniejszych katalogów.
 
 ## Autorzy
 
-- Imię i nazwisko — zakres odpowiedzialności
+- Kacper Korpacki — wszystko
