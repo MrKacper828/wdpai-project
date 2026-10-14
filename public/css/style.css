@@ -1,0 +1,23 @@
+:root {
+  --color-brand: #635bff;
+  --color-text: #182230;
+  --color-muted: #667085;
+  --color-surface: #ffffff;
+  --color-background: #f4f7fb;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --radius: 1rem;
+}
+
+[data-theme="dark"] {
+  --color-text: #f7f9fc;
+  --color-muted: #b6c0cf;
+  --color-surface: #202938;
+  --color-background: #111827;
+}
+
+body {
+  color: var(--color-text);
+  background: var(--color-background);
+}
