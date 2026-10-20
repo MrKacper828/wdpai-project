@@ -13,6 +13,7 @@ $routing = new Routing();
 $routing->get('/projects', ProjectController::class, 'index');
 $routing->get('/projects/{id}', ProjectController::class, 'show');
 $routing->get('/', DefaultController::class, 'index');
+$routing->get('/table_windows', DefaultController::class, 'tableWindow');
 
 $routeFound = $routing->dispatch(
     $_SERVER['REQUEST_METHOD'],

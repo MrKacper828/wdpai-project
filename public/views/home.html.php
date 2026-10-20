@@ -9,7 +9,8 @@
 <body>
     <main>
         <h1>Strona główna</h1>
-        <a href="/projects">Zobacz projekty</a>
+        <p><a href="/projects">Zobacz projekty</a></p>
+        <p><a href="/table_windows">Zobacz główne okno gry</a></p>
     </main>
 </body>
 </html>
