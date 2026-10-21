@@ -20,10 +20,4 @@ final class DefaultController extends AppController
             'pageTitle' => 'Nie znaleziono strony',
         ]);
     }
-
-    public function tableWindow(): void {
-        $this->render('table_window', [
-            'pageTitle' => 'Główne okno gry',
-        ]);
-    }
 }

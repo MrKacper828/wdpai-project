@@ -12,7 +12,7 @@
     </aside>
     <main>
         <nav>
-            <p>górny navbar</p>
+            <p>górny navbar | nr kampanii: <?= htmlspecialchars((string)$campaignId) ?></p>
         </nav>
         <section>
             <p>dm i lista graczy</p>
