@@ -10,9 +10,13 @@ require_once dirname(__DIR__) . '/vendor/autoload.php';
 
 $routing = new Routing();
 
-$routing->get('/campaigns', CampaignController::class, 'index');
-$routing->get('/campaigns/{id}', CampaignController::class, 'show');
 $routing->get('/', DefaultController::class, 'index');
+$routing->get('/login', DefaultController::class, 'login');
+$routing->get('/characters', DefaultController::class, 'characters');
+
+$routing->get('/campaigns', CampaignController::class, 'index');
+$routing->get('/campaigns/join', CampaignController::class, 'join');
+$routing->get('/campaigns/{id}', CampaignController::class, 'show');
 
 $routeFound = $routing->dispatch(
     $_SERVER['REQUEST_METHOD'],

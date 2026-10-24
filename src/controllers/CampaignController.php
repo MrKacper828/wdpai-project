@@ -20,4 +20,11 @@ final class CampaignController extends AppController
             'campaignId' => $id,
         ]);
     }
+
+    public function join(): void
+    {
+        $this->render('join', [
+            'pageTitle' => 'Dołączanie do rozgrywki',
+        ]);
+    }
 }

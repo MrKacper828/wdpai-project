@@ -10,7 +10,21 @@ final class DefaultController extends AppController
     public function index(): void
     {
         $this->render('home', [
-            'pageTitle' => 'Moja aplikacja',
+            'pageTitle' => 'Strona główna',
+        ]);
+    }
+
+    public function login(): void //tymczasowo tutaj, potem SecureController
+    {
+        $this->render('login', [
+            'pageTitle' => 'Logowanie do konta',
+        ]);
+    }
+
+    public function characters(): void //tymczasowo tutaj, potem osobny controller chyba
+    {
+        $this->render('characters', [
+            'pageTitle' => 'Karty postaci',
         ]);
     }
 
