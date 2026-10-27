@@ -14,20 +14,6 @@ final class DefaultController extends AppController
         ]);
     }
 
-    public function login(): void //tymczasowo tutaj, potem SecureController
-    {
-        $this->render('login', [
-            'pageTitle' => 'Logowanie do konta',
-        ]);
-    }
-
-    public function characters(): void //tymczasowo tutaj, potem osobny controller chyba
-    {
-        $this->render('characters', [
-            'pageTitle' => 'Karty postaci',
-        ]);
-    }
-
     public function notFound(): void
     {
         $this->render('not-found', [

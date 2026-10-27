@@ -13,6 +13,7 @@
     <main>
         <nav>
             <p>górny navbar | nr kampanii: <?= htmlspecialchars((string)$campaignId) ?></p>
+            <p><a href="/campaigns/<?= $campaignId ?>/characters">Zobacz karty postaci tej kampanii</a></p>
         </nav>
         <section>
             <p>dm i lista graczy</p>

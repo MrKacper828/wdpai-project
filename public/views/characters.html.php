@@ -9,10 +9,11 @@
 <body>
     <nav>
         <p>navbar</p>
+        <p><a href="/campaigns/<?= $campaignId ?>">Wróć do pokoju gry</a></p>
     </nav>
     <main>
         <section>
-            <p>Lista kart postaci (z podziałem na kampanię, lub do tego okna wchodzi się dopiero z kampanii, przez co każda kampania ma swoje karty postaci w tej zakładce): </p>
+            <p>Lista kart postaci: </p>
             <ul>
                 <li>Karta 1</li>
                 <li>Karta 2</li>

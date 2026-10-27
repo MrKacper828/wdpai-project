@@ -17,7 +17,6 @@
         <p><a href="/campaigns/1">Zobacz główne okno gry</a></p>
         <p><a href="/campaigns/join">Zobacz menu dołączania do rozgrywki</a></p>
         <p><a href="/login">Zobacz menu logowania</a></p>
-        <p><a href="/characters">Zobacz menu kart postaci</a></p>
     </main>
 </body>
 </html>
