@@ -18,7 +18,4 @@
         <p>logi</p>
     </section>
 </main>
-<footer>
-    <p>stopka</p>
-</footer>
 <a href="/">Wróć na stronę główną</a>

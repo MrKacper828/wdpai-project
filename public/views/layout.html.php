@@ -15,5 +15,8 @@
 </head>
 <body>
     <?= $content ?>
+    <footer class="app-footer">
+        <p>HexTavern</p>
+    </footer>
 </body>
 </html>
