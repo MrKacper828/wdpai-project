@@ -7,8 +7,8 @@
 :root {
   --color-brand: #FF9E2C;
   --color-text: #ffffff;
-  --color-surface: #472d1d;
-  --color-background: #18110b;
+  --color-surface: #5a361f;
+  --color-background: #2f1e10;
   --space-1: 0.5rem;
   --space-2: 1rem;
   --space-3: 1.5rem;
@@ -58,8 +58,8 @@ a:hover { opacity: 0.8; }
 
 button:focus-visible,
 a:focus-visible {
-  outline: 3px solid color-mix(in srgb, var(--color-brand) 45%, white);
-  outline-offset: 3px;
+  outline: 0.1875rem solid color-mix(in srgb, var(--color-brand) 45%, white);
+  outline-offset: 0.1875rem;
 }
 
 button, input, select, textarea {
@@ -70,5 +70,5 @@ button, input, select, textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: var(--font1)
+  font-family: var(--font1);
 }
