@@ -43,10 +43,22 @@ main {
     padding: var(--space-1);
 }
 
+#login button:hover {
+    filter: brightness(1.1);
+}
+
 #login input {
     padding: var(--space-1);
     border-radius: 8px;
     border: 1px solid var(--color-brand);
     background-color: var(--color-background);
     color: var(--color-text);
+}
+
+@media (max-width: 480px) {
+    #login {
+        width: 100%;
+        padding: var(--space-2);
+        box-shadow: none;
+    }
 }
