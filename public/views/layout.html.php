@@ -11,7 +11,7 @@
     <?php foreach ($stylesheets ?? [] as $stylesheet): ?>
         <link rel="stylesheet" href="<?= htmlspecialchars($stylesheet, ENT_QUOTES, 'UTF-8') ?>">
     <?php endforeach; ?>
-    <script src="https://kit.fontawesome.com/8fd9367667.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <?= $content ?>
