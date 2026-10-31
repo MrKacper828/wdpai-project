@@ -16,7 +16,16 @@
 <body>
     <?= $content ?>
     <footer class="app-footer">
-        <p>HexTavern</p>
+        <div class="footer-col-left">
+            <span>HexTavern · Tabletop Simulator</span>
+        </div>
+        <div class="footer-col-center">
+            <a href="#">Tavern Rules</a>
+            <a href="#">Patrons</a>
+        </div>
+        <div class="footer-col-right">
+            <span>© 2026 HexTavern</span>
+        </div>
     </footer>
 </body>
 </html>

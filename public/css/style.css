@@ -33,9 +33,6 @@ h1, h2, h3 {
 body {
   color: var(--color-text);
   background: var(--color-background);
-}
-
-body {
   font-family: var(--font-default);
   line-height: 1.6;
   margin: 0;
@@ -66,9 +63,41 @@ button, input, select, textarea {
   font: inherit;
 }
 
+/*globalna stopka aplikacji*/
 .app-footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  padding: 1.25rem 2.5rem;
+  background: rgba(24, 15, 8, 0.9);
+  border-top: 0.0625rem solid rgba(255, 158, 44, 0.12);
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.55);
   font-family: var(--font1);
+  letter-spacing: 0.03em;
+}
+
+.app-footer .footer-col-center {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.app-footer .footer-col-center a {
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.app-footer .footer-col-center a:hover {
+  color: var(--color-brand);
+}
+
+/*widok mobilny*/
+@media (max-width: 48rem) {
+  .app-footer {
+    flex-direction: column;
+    gap: 0.625rem;
+    text-align: center;
+    padding: 1.25rem 1rem;
+  }
 }
