@@ -1,23 +1,103 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
-  --color-brand: #635bff;
-  --color-text: #182230;
-  --color-muted: #667085;
-  --color-surface: #ffffff;
-  --color-background: #f4f7fb;
+  --color-brand: #FF9E2C;
+  --color-text: #ffffff;
+  --color-surface: #5a361f;
+  --color-background: #2f1e10;
   --space-1: 0.5rem;
   --space-2: 1rem;
   --space-3: 1.5rem;
   --radius: 1rem;
+  --font1: 'EB Garamond', Georgia, serif;
+  --font2: 'Literata', Georgia, serif;
+  --font-default: Inter, system-ui, sans-serif;
 }
 
-[data-theme="dark"] {
-  --color-text: #f7f9fc;
-  --color-muted: #b6c0cf;
-  --color-surface: #202938;
-  --color-background: #111827;
+[data-theme="light"] {
+  --color-brand: #FF9E2C;
+  --color-text: #000000;
+  --color-surface: #efd8aa;
+  --color-background: #f5ebd7;
+}
+
+h1, h2, h3 {
+  font-family: var(--font1);
+  letter-spacing: 0.03em;
 }
 
 body {
   color: var(--color-text);
   background: var(--color-background);
+  font-family: var(--font-default);
+  line-height: 1.6;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+a {
+  color: var(--color-brand);
+  text-decoration-thickness: 0.12em;
+  text-underline-offset: 0.2em;
+}
+
+a:hover { opacity: 0.8; }
+
+button:focus-visible,
+a:focus-visible {
+  outline: 0.1875rem solid color-mix(in srgb, var(--color-brand) 45%, white);
+  outline-offset: 0.1875rem;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+/*globalna stopka aplikacji*/
+.app-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2.5rem;
+  background: rgba(24, 15, 8, 0.9);
+  border-top: 0.0625rem solid rgba(255, 158, 44, 0.12);
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.55);
+  font-family: var(--font1);
+  letter-spacing: 0.03em;
+}
+
+.app-footer .footer-col-center {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.app-footer .footer-col-center a {
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.app-footer .footer-col-center a:hover {
+  color: var(--color-brand);
+}
+
+/*widok mobilny*/
+@media (max-width: 48rem) {
+  .app-footer {
+    flex-direction: column;
+    gap: 0.625rem;
+    text-align: center;
+    padding: 1.25rem 1rem;
+  }
 }
