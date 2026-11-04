@@ -1,45 +1,25 @@
-<?php $stylesheets = ['/css/login.css']; ?>
+<?php
+$stylesheets = ['/css/login.css'];
 
-<header class="tavern-topbar">
-    <a href="/" class="brand-group" aria-label="HexTavern - strona główna">
-        <div class="brand-emblem" aria-hidden="true">
-            <i class="fa-solid fa-fire-burner"></i>
-        </div>
-        <div class="brand-info">
-            <span class="brand-title">HexTavern</span>
-            <span class="brand-tagline">ONLINE TAVERN TABLETOP</span>
-        </div>
+ob_start();
+?>
+<nav class="portal-nav" aria-label="Nawigacja główna">
+    <a href="/" class="portal-link">
+        <span class="link-primary">The Tavern</span>
+        <span class="link-secondary">Main</span>
     </a>
-
-    <nav class="portal-nav" aria-label="Nawigacja główna">
-        <a href="/" class="portal-link">
-            <span class="link-primary">The Tavern</span>
-            <span class="link-secondary">Main</span>
-        </a>
-        <a href="/campaigns/join" class="portal-link">
-            <span class="link-primary">Join</span>
-            <span class="link-secondary">Room</span>
-        </a>
-        <a href="/login" class="portal-link active">
-            <span class="link-primary">DM</span>
-            <span class="link-secondary">Login</span>
-        </a>
-    </nav>
-
-    <div class="utility-group">
-        <button type="button" id="sound-toggle" class="util-btn" title="Dźwięk atmosfery" aria-label="Ambience sound">
-            <i class="fa-solid fa-volume-high"></i>
-        </button>
-        <button type="button" id="theme-toggle" class="util-btn" title="Zmień motyw" aria-label="Toggle theme">
-            <i class="fa-regular fa-moon"></i>
-        </button>
-        <button type="button" id="lang-switch" class="lang-pill" aria-label="Wybierz język (PL / EN)">
-            <span class="lang-option active">PL</span>
-            <span class="lang-divider" aria-hidden="true">/</span>
-            <span class="lang-option">EN</span>
-        </button>
-    </div>
-</header>
+    <a href="/campaigns/join" class="portal-link">
+        <span class="link-primary">Join</span>
+        <span class="link-secondary">Room</span>
+    </a>
+    <a href="/login" class="portal-link active">
+        <span class="link-primary">DM</span>
+        <span class="link-secondary">Login</span>
+    </a>
+</nav>
+<?php
+$navbarContent = ob_get_clean();
+?>
 
 <main class="login-chamber">
     <section class="tome-card">
@@ -125,36 +105,6 @@
             const icon = togglePasswordBtn.querySelector('i');
             if (icon) {
                 icon.className = isPassword ? 'fa-regular fa-eye-slash' : 'fa-regular fa-eye';
-            }
-        });
-    }
-
-    const langSwitchBtn = document.getElementById('lang-switch');
-    if (langSwitchBtn) {
-        langSwitchBtn.addEventListener('click', () => {
-            const options = langSwitchBtn.querySelectorAll('.lang-option');
-            options.forEach(opt => opt.classList.toggle('active'));
-        });
-    }
-
-    const soundToggleBtn = document.getElementById('sound-toggle');
-    if (soundToggleBtn) {
-        soundToggleBtn.addEventListener('click', () => {
-            const icon = soundToggleBtn.querySelector('i');
-            if (icon) {
-                const isMuted = icon.classList.contains('fa-volume-xmark');
-                icon.className = isMuted ? 'fa-solid fa-volume-high' : 'fa-solid fa-volume-xmark';
-            }
-        });
-    }
-
-    const themeToggleBtn = document.getElementById('theme-toggle');
-    if (themeToggleBtn) {
-        themeToggleBtn.addEventListener('click', () => {
-            const icon = themeToggleBtn.querySelector('i');
-            if (icon) {
-                const isSun = icon.classList.contains('fa-sun');
-                icon.className = isSun ? 'fa-regular fa-moon' : 'fa-regular fa-sun';
             }
         });
     }
