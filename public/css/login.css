@@ -1,194 +1,3 @@
-/* Górny pasek nawigacyjny */
-.tavern-topbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.875rem 2.5rem;
-    background: rgba(28, 17, 9, 0.92);
-    border-bottom: 0.0625rem solid rgba(255, 158, 44, 0.15);
-    backdrop-filter: blur(0.5rem);
-    position: relative;
-    z-index: 10;
-}
-
-.brand-group {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    text-decoration: none;
-    color: inherit;
-    transition: opacity 0.2s ease;
-}
-
-.brand-group:hover {
-    opacity: 0.88;
-}
-
-.brand-emblem {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.25rem;
-    height: 2.25rem;
-    border-radius: 0.5rem;
-    background: rgba(255, 158, 44, 0.12);
-    border: 0.0625rem solid rgba(255, 158, 44, 0.35);
-    color: var(--color-brand);
-    font-size: 1.125rem;
-    box-shadow: 0 0 0.75rem rgba(255, 158, 44, 0.2);
-}
-
-.brand-info {
-    display: flex;
-    flex-direction: column;
-}
-
-.brand-title {
-    font-family: var(--font1);
-    font-size: 1.25rem;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    color: var(--color-brand);
-    line-height: 1.2;
-}
-
-.brand-tagline {
-    font-size: 0.5625rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.6);
-}
-
-/* Zakładki nawigacyjne w nagłówku */
-.portal-nav {
-    display: flex;
-    align-items: stretch;
-    background: rgba(18, 11, 6, 0.75);
-    border: 0.0625rem solid rgba(255, 158, 44, 0.2);
-    border-radius: 0.375rem;
-    padding: 0.1875rem;
-    gap: 0.1875rem;
-}
-
-.portal-link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0.375rem 1.25rem;
-    border-radius: 0.25rem;
-    text-decoration: none;
-    transition: background 0.2s ease, color 0.2s ease;
-}
-
-.portal-link .link-primary {
-    font-family: var(--font1);
-    font-size: 0.8125rem;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.8);
-    line-height: 1.15;
-}
-
-.portal-link .link-secondary {
-    font-size: 0.6875rem;
-    color: rgba(255, 255, 255, 0.5);
-    line-height: 1.15;
-}
-
-.portal-link:hover:not(.active) {
-    background: rgba(255, 158, 44, 0.1);
-}
-
-.portal-link:hover:not(.active) .link-primary,
-.portal-link:hover:not(.active) .link-secondary {
-    color: var(--color-brand);
-}
-
-/* Navbar DM Login */
-.portal-link.active {
-    background: var(--color-brand);
-    box-shadow: 0 0 1rem rgba(255, 158, 44, 0.45);
-}
-
-.portal-link.active .link-primary {
-    color: #1a0f07;
-    font-weight: 700;
-}
-
-.portal-link.active .link-secondary {
-    color: #2b180a;
-    font-weight: 600;
-}
-
-/* Przyciski narzędziowe po prawej navbara */
-.utility-group {
-    display: flex;
-    align-items: center;
-    gap: 0.625rem;
-}
-
-.util-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2rem;
-    height: 2rem;
-    background: rgba(255, 158, 44, 0.08);
-    border: 0.0625rem solid rgba(255, 158, 44, 0.2);
-    border-radius: 0.375rem;
-    color: rgba(255, 255, 255, 0.75);
-    cursor: pointer;
-    font-size: 0.8125rem;
-    transition: all 0.2s ease;
-}
-
-.util-btn:hover {
-    background: rgba(255, 158, 44, 0.2);
-    color: var(--color-brand);
-}
-
-.lang-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.25rem;
-    padding: 0.1875rem 0.3125rem;
-    background: rgba(18, 11, 6, 0.75);
-    border: 0.0625rem solid rgba(255, 158, 44, 0.2);
-    border-radius: 0.375rem;
-    font-size: 0.6875rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    cursor: pointer;
-    color: inherit;
-    transition: background 0.2s ease, border-color 0.2s ease;
-}
-
-.lang-pill:hover {
-    border-color: rgba(255, 158, 44, 0.45);
-}
-
-.lang-option {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.1875rem 0.375rem;
-    border-radius: 0.25rem;
-    color: rgba(255, 255, 255, 0.55);
-    transition: all 0.2s ease;
-}
-
-.lang-option.active {
-    background: var(--color-brand);
-    color: #1a0f07;
-    font-weight: 700;
-    box-shadow: 0 0 0.5rem rgba(255, 158, 44, 0.35);
-}
-
-.lang-divider {
-    color: rgba(255, 255, 255, 0.25);
-    font-size: 0.625rem;
-}
-
 /* Główny obszar logowania */
 .login-chamber {
     flex: 1;
@@ -205,6 +14,7 @@
         rgba(47, 30, 16, 0.7) 65%,
         var(--color-background) 100%
     );
+    transition: background 0.3s ease;
 }
 
 /* Karta formularza logowania */
@@ -218,6 +28,7 @@
     box-shadow:
         0 1rem 3rem rgba(0, 0, 0, 0.6),
         0 0 3rem rgba(255, 158, 44, 0.12);
+    transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Ozdobne narożniki księgi */
@@ -386,6 +197,7 @@
     gap: 0.625rem;
     cursor: pointer;
     font-size: 0.8125rem;
+    line-height: 1.25rem;
     color: rgba(255, 255, 255, 0.78);
     user-select: none;
 }
@@ -405,8 +217,23 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.2s ease;
+    line-height: 1;
+    overflow: hidden;
+    transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
     flex-shrink: 0;
+}
+
+.checkbox-box::after {
+    content: "\f00c";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: #1a0f07;
+    font-size: 0.625rem;
+    line-height: 1;
+    display: block;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 0.15s ease, transform 0.15s ease;
 }
 
 .tome-checkbox:checked + .checkbox-box {
@@ -415,11 +242,8 @@
 }
 
 .tome-checkbox:checked + .checkbox-box::after {
-    content: "\f00c";
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    color: #1a0f07;
-    font-size: 0.6875rem;
+    opacity: 1;
+    transform: scale(1);
 }
 
 /* Przycisk logowania (Sign In) */
@@ -486,22 +310,89 @@
     opacity: 0.85;
 }
 
-/* Responsywność (Media Queries) */
-@media (max-width: 48rem) {
-    .tavern-topbar {
-        padding: 0.75rem 1rem;
-        flex-wrap: wrap;
-        gap: 0.75rem;
-        justify-content: center;
-    }
-
-    .portal-nav {
-        order: 3;
-        width: 100%;
-        justify-content: space-around;
-    }
+/* Dostosowanie widoku logowania pod motyw jasny */
+[data-theme="light"] .login-chamber {
+    background: radial-gradient(
+        circle at 50% 46%,
+        rgba(255, 158, 44, 0.22) 0%,
+        rgba(239, 216, 170, 0.5) 45%,
+        var(--color-background) 100%
+    );
 }
 
+[data-theme="light"] .tome-card {
+    background: linear-gradient(180deg, #fffbf2 0%, var(--color-surface) 100%);
+    border-color: rgba(255, 158, 44, 0.45);
+    box-shadow:
+        0 1rem 3rem rgba(90, 54, 31, 0.15),
+        0 0 2rem rgba(255, 158, 44, 0.15);
+}
+
+[data-theme="light"] .tome-description {
+    color: rgba(43, 24, 10, 0.72);
+}
+
+[data-theme="light"] .field-label {
+    color: rgba(43, 24, 10, 0.85);
+}
+
+[data-theme="light"] .field-hint-link {
+    color: #a04f00;
+}
+
+[data-theme="light"] .field-input-wrap {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(255, 158, 44, 0.45);
+}
+
+[data-theme="light"] .field-input-wrap:focus-within {
+    border-color: var(--color-brand);
+    box-shadow: 0 0 0.625rem rgba(255, 158, 44, 0.4);
+}
+
+[data-theme="light"] .field-input-wrap input::placeholder {
+    color: rgba(43, 24, 10, 0.4);
+}
+
+[data-theme="light"] .input-action-btn {
+    color: rgba(43, 24, 10, 0.55);
+}
+
+[data-theme="light"] .input-action-btn:hover {
+    color: #a04f00;
+}
+
+[data-theme="light"] .tome-checkbox-label {
+    color: rgba(43, 24, 10, 0.8);
+}
+
+[data-theme="light"] .checkbox-box {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(255, 158, 44, 0.6);
+}
+
+[data-theme="light"] .tome-submit-btn {
+    background: linear-gradient(180deg, #ffb04f 0%, #ea8917 100%);
+    border-color: #d47400;
+    color: #1a0f07;
+    box-shadow:
+        0 0 1.25rem rgba(255, 158, 44, 0.4),
+        inset 0 0 0.5rem rgba(255, 255, 255, 0.35);
+}
+
+[data-theme="light"] .tome-submit-btn i {
+    color: #1a0f07;
+}
+
+[data-theme="light"] .form-footer p {
+    color: rgba(43, 24, 10, 0.75);
+}
+
+[data-theme="light"] .register-link {
+    color: #a04f00;
+}
+
+/* Responsywność */
 @media (max-width: 30rem) {
     .login-chamber {
         padding: 1.5rem 1rem;
@@ -514,11 +405,5 @@
 
     .tome-title {
         font-size: 1.5rem;
-    }
-
-    .sanctum-badge {
-        font-size: 0.5625rem;
-        letter-spacing: 0.1em;
-        text-align: center;
     }
 }
