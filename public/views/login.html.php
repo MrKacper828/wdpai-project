@@ -56,7 +56,7 @@ $navbarContent = ob_get_clean();
             <div class="field-block">
                 <div class="field-label-row">
                     <label for="password" class="field-label">Password</label>
-                    <a href="#" class="field-hint-link">Forgot password?</a>
+                    <a href="/forgot-password" class="field-hint-link">Forgot password?</a>
                 </div>
                 <div class="field-input-wrap">
                     <i class="fa-solid fa-key field-icon" aria-hidden="true"></i>
@@ -84,11 +84,11 @@ $navbarContent = ob_get_clean();
 
             <button type="submit" class="tome-submit-btn">
                 <i class="fa-solid fa-lock" aria-hidden="true"></i>
-                <span>Sign In</span>
+                <span><a href="/campaigns">Sign In</a></span>
             </button>
 
             <div class="form-footer">
-                <p>New DM? <a href="/" class="register-link">Register here</a></p>
+                <p>New DM? <a href="/register" class="register-link">Register here</a></p>
             </div>
         </form>
     </section>

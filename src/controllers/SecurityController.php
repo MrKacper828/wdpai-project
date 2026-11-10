@@ -13,4 +13,18 @@ final class SecurityController extends AppController
             'pageTitle' => 'Logowanie do konta',
         ]);
     }
+
+    public function register(): void
+    {
+        $this->render('register', [
+            'pageTitle' => 'Rejestracja konta',
+        ]);
+    }
+
+    public function forgotPassword(): void
+    {
+        $this->render('forgot-password', [
+            'pageTitle' => 'Odzyskiwanie hasła',
+        ]);
+    }
 }
