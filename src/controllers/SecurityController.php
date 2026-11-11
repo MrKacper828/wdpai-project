@@ -27,4 +27,11 @@ final class SecurityController extends AppController
             'pageTitle' => 'Odzyskiwanie hasła',
         ]);
     }
+
+    public function resetPassword(): void
+    {
+        $this->render('reset-password', [
+            'pageTitle' => 'Ustawienie nowego hasła',
+        ]);
+    }
 }

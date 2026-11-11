@@ -27,6 +27,7 @@ Strona oferuje darmowe tworzenie lobby do sesji online w gry TTRPG (Tabletop Rol
 git clone https://github.com/MrKacper828/wdpai-project.git
 cd REPOZYTORIUM
 docker compose up --build -d
+docker compose exec php composer dump-autoload
 ```
 
 Aplikacja: http://localhost:8080

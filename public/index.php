@@ -17,6 +17,7 @@ $routing->get('/', DefaultController::class, 'index');
 $routing->get('/login', SecurityController::class, 'login');
 $routing->get('/register', SecurityController::class, 'register');
 $routing->get('/forgot-password', SecurityController::class, 'forgotPassword');
+$routing->get('/reset-password', SecurityController::class, 'resetPassword');
 
 $routing->get('/campaigns', CampaignController::class, 'index');
 $routing->get('/campaigns/join', CampaignController::class, 'join');

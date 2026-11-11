@@ -82,10 +82,10 @@ $navbarContent = ob_get_clean();
                 </label>
             </div>
 
-            <button type="submit" class="tome-submit-btn">
+            <a href="/campaigns" class="tome-submit-btn">
                 <i class="fa-solid fa-lock" aria-hidden="true"></i>
-                <span><a href="/campaigns">Sign In</a></span>
-            </button>
+                <span>Sign In</span>
+            </a>
 
             <div class="form-footer">
                 <p>New DM? <a href="/register" class="register-link">Register here</a></p>
