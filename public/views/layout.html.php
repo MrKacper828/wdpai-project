@@ -40,7 +40,7 @@
     <header class="tavern-topbar">
         <a href="/" class="brand-group" aria-label="HexTavern - strona główna">
             <div class="brand-emblem" aria-hidden="true">
-                <i class="fa-solid fa-fire-burner"></i>
+                <i class="fa-solid fa-dice"></i>
             </div>
             <div class="brand-info">
                 <span class="brand-title">HexTavern</span>
@@ -73,6 +73,7 @@
         </div>
         <div class="footer-col-center">
             <a href="#">Tavern Rules</a>
+            <a href="#">Tavern Policy</a>
             <a href="#">Patrons</a>
         </div>
         <div class="footer-col-right">
