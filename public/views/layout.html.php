@@ -51,6 +51,17 @@
         <?= $navbarContent ?? '' ?>
 
         <div class="utility-group">
+            <a href="<?= ($isLoggedIn ?? false) ? '/campaigns' : '/login' ?>"
+               class="user-badge <?= ($isLoggedIn ?? false) ? 'logged-in' : 'logged-out' ?>"
+               title="<?= ($isLoggedIn ?? false) ? 'Przejdź do kampanii' : 'Zaloguj się' ?>"
+               aria-label="<?= ($isLoggedIn ?? false) ? 'Profil użytkownika' : 'Zaloguj się' ?>">
+                <div class="user-avatar-wrap">
+                    <i class="fa-solid fa-user user-avatar-icon" aria-hidden="true"></i>
+                    <span class="user-status-dot" aria-hidden="true"></span>
+                </div>
+                <span class="user-name"><?= htmlspecialchars($userName ?? 'User not logged in', ENT_QUOTES, 'UTF-8') ?></span>
+            </a>
+
             <button type="button" id="sound-toggle" class="util-btn" title="Dźwięk atmosfery" aria-label="Ambience sound">
                 <i class="fa-solid fa-volume-high"></i>
             </button>

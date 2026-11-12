@@ -16,7 +16,26 @@ abstract class AppController
             throw new \RuntimeException('View not found: ' . $template);
         }
 
-        extract($variables, EXTR_SKIP);
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+
+        if (isset($_GET['demo_login'])) {
+            $_SESSION['user'] = ['name' => 'Brokk Stonehammer'];
+        } elseif (isset($_GET['demo_logout'])) {
+            unset($_SESSION['user']);
+        }
+
+        $currentUser = $_SESSION['user'] ?? null;
+        $isLoggedIn = $currentUser !== null;
+        $userName = $isLoggedIn ? ($currentUser['name'] ?? 'Adventurer') : 'User not logged in';
+
+        $globalVariables = [
+            'isLoggedIn' => $isLoggedIn,
+            'userName' => $userName,
+        ];
+
+        extract(array_merge($globalVariables, $variables), EXTR_SKIP);
 
         ob_start();
         require $templatePath;
