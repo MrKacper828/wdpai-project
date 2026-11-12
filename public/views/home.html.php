@@ -8,7 +8,7 @@ $stylesheets = ['/css/login.css', '/css/home.css'];
             Welcome to the HexTavern
         </h1>
         <p class="hero-subtitle">
-            Pull up a stool, roll your fate upon the tabletop, and weave enduring tales by fireside candlelight.
+            Pull up a stool, roll your fate upon the tabletop, and get ready with your companions for the adventures that await.
         </p>
     </section>
 
@@ -105,7 +105,7 @@ $stylesheets = ['/css/login.css', '/css/home.css'];
     </section>
 
     <div>
-        <p>Tymczasowe linki dla jeszcze nie wykonanych:</p>
+        <p>Tymczasowe linki dla jeszcze nie wykonanych podstron:</p>
         <p><a href="/campaigns">Zobacz Kampanie</a></p>
         <p><a href="/campaigns/1">Zobacz główne okno gry danej kampanii</a></p>
         <p><a href="/campaigns/1/characters">Zobacz karty postaci z danej kampanii</a></p>
