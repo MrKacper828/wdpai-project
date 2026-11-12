@@ -409,3 +409,11 @@ button, input, select, textarea {
     padding: 1.25rem 1rem;
   }
 }
+
+/* Pływający navbar na desktopach */
+@media (min-width: 48.0625rem) {
+  .tavern-topbar {
+    position: sticky;
+    top: 0;
+  }
+}
